@@ -18,7 +18,7 @@ public class UI extends PApplet
 		int ones = value - ((hundreds * 100)  + (tens * 10));
 		print(hundreds + ",");
 		print(tens + ",");
-		println(ones);
+		println(ones); 
 	}
 
 	public void settings()
@@ -56,10 +56,12 @@ public class UI extends PApplet
 		}
 	}
 
-	/*public Colour findColour(int value)
+	public Colour findColour(int value)
 	{
+		Colour find = colours.get(value);
 
-	}*/
+		return find;
+	}
 
 	public void loadResistors()
 	{
@@ -78,6 +80,13 @@ public class UI extends PApplet
 	
 	public void draw()
 	{			
-		
+		for(int i = 0; i < resistors.size(); i++)
+		{
+			float space = 30;
+			float y = map(i, 0, resistors.size(), 0, height);
+			line(width/4, y + space, width/4 + 50, y + space);
+			rect(width/4 + 50, (y - space), 120, 120);
+			line(width/4 + 120 + 50, y + space, (width/4) + 120 + 100, y + space);
+		}
 	}
 }

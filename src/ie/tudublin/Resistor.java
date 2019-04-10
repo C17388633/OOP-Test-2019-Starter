@@ -14,7 +14,10 @@ public class Resistor
         this.value = value;
         int hundreds = (value / 100);
 		int tens = (value - (hundreds * 100)) / 10;
-		int ones = value - ((hundreds * 100)  + (tens * 10));
+        int ones = value - ((hundreds * 100)  + (tens * 10));
+        System.out.print(hundreds + ",");
+		System.out.print(tens + ",");
+		System.out.println(ones);
     }
 
     public String toString()
