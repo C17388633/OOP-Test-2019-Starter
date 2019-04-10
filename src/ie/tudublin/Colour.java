@@ -10,6 +10,15 @@ public class Colour
     private int b;
     private int value;
 
+    public Colour(String colour, int r, int g, int b, int value)
+    {
+        this.colour = colour;
+        this.r = r;
+        this.g = g;
+        this.b = b;
+        this.value = value;
+    }
+
     public String toString()
     {
         return colour + "\t" + r + ", " + g + ", " + b + "\t" + value;

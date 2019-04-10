@@ -23,11 +23,35 @@ public class UI extends PApplet
 	public void settings()
 	{
 		size(500, 800);
-		
+		loadColours();
 		separate(381);
 		separate(1);
 		separate(92);
 	}
+
+	public void loadColours()
+    {
+        Table table = loadTable("colours.csv", "header");
+        for(TableRow tr:table.rows())
+        {
+            Colour c = new Colour(tr);
+            colours.add(c);
+        }        
+	}
+	
+	public void printColours()
+	{
+		for(int i = 0; i < colours.size(); i++)
+		{
+			Colour colourPrint = colours.get(i);
+			System.out.println(colourPrint);
+		}
+	}
+
+	/*public Colour findColour(int value)
+	{
+
+	}*/
 
 	public void setup() 
 	{
