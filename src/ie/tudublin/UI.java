@@ -82,11 +82,17 @@ public class UI extends PApplet
 	{			
 		for(int i = 0; i < resistors.size(); i++)
 		{
+			noFill();
+			float threeQuaters = (width/4) * 3 ;
 			float space = 30;
 			float y = map(i, 0, resistors.size(), 0, height);
 			line(width/4, y + space, width/4 + 50, y + space);
 			rect(width/4 + 50, (y - space), 120, 120);
 			line(width/4 + 120 + 50, y + space, (width/4) + 120 + 100, y + space);
+			textAlign(CENTER, CENTER);
+			fill(0);
+			//String res = resistors.getInt(i);
+			text("res", threeQuaters ,y);
 		}
 	}
 }
