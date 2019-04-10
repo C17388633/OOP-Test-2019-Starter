@@ -22,9 +22,13 @@ public class Resistor
         return value + "\t" + hundreads + ", " + tens + ", " + ones;
     }
 
-    public Resistor(TableRow tr)
+    public Resistor(TableRow tr, int i)
     {
-        this(tr.getInt("value"));
+        
+        this( tr.getInt(i));
+        
+        //String meh= tr.getColumnTitle(0);
+        //System.out.print(meh);
     }
 
     /**
